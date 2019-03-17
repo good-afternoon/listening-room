@@ -1,0 +1,40 @@
+<%
+  var siteName,
+      pageTitle,
+      description;
+
+  siteName = 'リスニング・ルーム';
+  description = '';
+  if(meta.title == "top"){
+    pageTitle = siteName;
+  } else {
+    pageTitle = meta.title + '｜' + siteName;
+  }
+%><!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="<%= description %>" />
+<!--OGP start-->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="<%= siteName %>">
+<meta property="og:title" content="<%= pageTitle %>">
+<meta property="og:description" content="<%= description %>">
+<meta property="og:image" content="https://good-afternoon.github.io/listening-room/assets/images/common/ogp.png">
+<!--OGP end-->
+<title><%= pageTitle %></title>
+<link rel="stylesheet" href="<%= meta.path %>assets/css/styles.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/101/three.min.js"></script>
+<script src="<%= meta.path %>assets/lib/js/controls/OrbitControls.js"></script>
+<script src="<%= meta.path %>assets/lib/js/loaders/DDSLoader.js"></script>
+<script src="<%= meta.path %>assets/lib/js/loaders/MTLLoader.js"></script>
+<script src="<%= meta.path %>assets/lib/js/loaders/OBJLoader.js"></script>
+<script src="<%= meta.path %>assets/lib/js/loaders/TDSLoader.js"></script>
+<script src="<%= meta.path %>assets/js/scripts.js"></script>
+
+</head>
+<body>

@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+/*
+body
+------------------------------------------------*/
+
+html{
+  font-size: 62.5%; /* sets the base font to 10px for easier math */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body{
+  -webkit-text-size-adjust: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, Verdana, Meiryo, "M+ 1p", sans-serif;
+  font-size: 1.4rem;
+  color: $color-black;
+  background: #222222;
+}
