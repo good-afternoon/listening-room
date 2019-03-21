@@ -31,7 +31,6 @@ function init() {
   // camera ------------------------------
   // カメラを作成
   var perscamera = new THREE.PerspectiveCamera(45, width / height, 1, 10000);
-  var orthocamera = new THREE.OrthographicCamera(width / -2, width / 2, height / 2, height / -2, 1, 10000);
   camera = perscamera;
   //camera.position.set(100, 100, 100);
   camera.position.set(0, 0, 100);
@@ -45,13 +44,9 @@ function init() {
   light1.position.set(1, 1, 1);
   scene.add(light1);
 
-  var light2 = new THREE.DirectionalLight(0x002288);
-  light2.position.set(-1, -1, -1);
-  scene.add(light2);
-
   // 環境光
-  var light3 = new THREE.AmbientLight(0x444444);
-  scene.add(light3);
+  var light2 = new THREE.AmbientLight(0x444444);
+  scene.add(light2);
 
   controls = new THREE.OrbitControls(camera);
 
@@ -60,7 +55,7 @@ function init() {
   // 平面のグループを作る
   var group = new THREE.Group();
   // グループの位置を指定
-  group.position.set(0, 1.2, -16);
+  group.position.set(0, 1.15, -16);
   // 3D空間にグループを追加する
   scene.add(group);
 
@@ -168,6 +163,8 @@ function init() {
       obj.add(objmodel);
       // sceneに追加
       scene.add(obj);
+
+      document.body.classList.add('-complete');
     }, onProgress, onError);
   });
 

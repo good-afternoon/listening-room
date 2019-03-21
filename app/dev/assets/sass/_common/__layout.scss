@@ -16,4 +16,10 @@ body{
   font-size: 1.4rem;
   color: $color-black;
   background: #222222;
+  opacity: 0;
+  overflow: hidden;
+  &.-complete{
+    opacity: 1;
+    transition: opacity 1s ease;
+  }
 }
